@@ -1,4 +1,4 @@
-New-UDPage -Url "/groups" -Name "Group Membership" -Icon (New-UDIcon -Icon 'Users' -Style @{ marginRight = "10px" }) -Content {
+New-UDPage -Url "/group-membership" -Name "Group Membership" -Icon (New-UDIcon -Icon 'Users' -Style @{ marginRight = "10px" }) -Content {
     New-UDTypography -Text 'Select Group' -Variant h5
 
     New-UDAutocomplete -OnLoadOptions {

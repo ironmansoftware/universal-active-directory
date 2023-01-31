@@ -1,6 +1,6 @@
 {
     "description": "Active Directory tools built with PowerShell Universal. Reset passwords, restore deleted users, manage group membership and search for objects.",
     "name": "Active Directory Dashboard",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "variables": []
 }

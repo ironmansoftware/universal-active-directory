@@ -4,7 +4,27 @@
 
 ![](./screenshot.png)
 
-Active Directory tools built with PowerShell Universal. Reset passwords, restore deleted users, manage group membership and search for objects.
+Active Directory tools built with PowerShell Universal. 
+
+## General Tools
+
+- Object Search
+
+## User Tools
+
+- Search Users
+- View Inactive Users
+- Reset Password
+- Restore Deleted Users
+
+## Group Tools
+
+- Search Groups
+- Manage Group Membership
+
+## Infrastructure Tools
+
+- View Domain Controllers
 
 ## Usage
 
