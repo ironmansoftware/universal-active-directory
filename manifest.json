@@ -1,6 +1,6 @@
 {
-    "description": "This template was generated with the PowerShell Universal Template repository.",
-    "name": "PowerShell Universal Template",
-    "version": "1.0.1",
+    "description": "Active Directory tools built with PowerShell Universal. Reset passwords, restore deleted users, manage group membership and search for objects.",
+    "name": "Active Directory",
+    "version": "2.0.0",
     "variables": []
 }
