@@ -1,5 +1,5 @@
-New-UDPage -Url "/groups" -Name "Group Membership" -Content {
-New-UDTypography -Text 'Select Group' -Variant h5
+New-UDPage -Url "/groups" -Name "Group Membership" -Icon (New-UDIcon -Icon 'Users' -Style @{ marginRight = "10px" }) -Content {
+    New-UDTypography -Text 'Select Group' -Variant h5
 
     New-UDAutocomplete -OnLoadOptions {
         Get-ADGroup -Filter "Name -like '*$body*'"  | Select-Object -ExpandProperty Name | ConvertTo-Json
@@ -15,8 +15,7 @@ New-UDTypography -Text 'Select Group' -Variant h5
     }
 
     New-UDDynamic -Id 'members' -Content {
-        if ($Session:SelectedGroup)
-        {
+        if ($Session:SelectedGroup) {
             $Data = Get-ADGroupMember -Identity $Session:SelectedGroup
             New-UDTable -Title $Session:SelectedGroup -Data $Data -ShowPagination -Columns @(
                 New-UDTableColumn -Property Name -Title 'Name'
@@ -45,8 +44,7 @@ New-UDTypography -Text 'Select Group' -Variant h5
             }
     
             New-UDButton -Text 'Add Member' -OnClick {
-                if ($Session:SelectedUser)
-                {
+                if ($Session:SelectedUser) {
                     Add-ADGroupMember -Identity $Session:SelectedGroup -Members (Get-ADUser -Identity $Session:SelectedUser)
                     Show-UDToast -Message "Added $Session:SelectedUser to $Session:SelectedGroup"
                     Sync-UDElement -Id 'members'
