@@ -24,6 +24,7 @@ Active Directory tools built with PowerShell Universal.
 
 ## Infrastructure Tools
 
+- Search Computers
 - View Domain Controllers
 
 ## Usage
