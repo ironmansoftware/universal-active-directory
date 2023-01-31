@@ -1,0 +1,20 @@
+name: Publish
+on: [workflow_dispatch]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Publish
+      run: |
+        Invoke-RestMethod https://ironmansoftware.com/powershell-universal/templates/v2 -Method POST -Headers @{
+           'X-Token' = $ENV:TOKEN
+        } -Body (@{ 
+           repositoryUrl = "https://github.com/$($ENV:GITHUB_REPOSITORY).git"
+        } | ConvertTo-Json) -ContentType 'application/json'
+      env:
+        TOKEN: ${{ secrets.TOKEN }}
+      shell: pwsh
