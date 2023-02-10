@@ -1,0 +1,1 @@
+﻿Get-ADComputer -Filter {(Enabled -eq $False)} -ResultPageSize 2000 -ResultSetSize $null -Properties Name, OperatingSystem, SamAccountName, DistinguishedName | Select-Object Name, OperatingSystem, SamAccountName, DistinguishedName
