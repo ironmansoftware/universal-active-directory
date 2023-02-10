@@ -46,7 +46,7 @@ Current Reports Include:
 
 ## Usage
 
-The `ActiveDirectory` module is required. All Active Directory commands run under the context of the PowerShell Universal service account. You can specify alternate credentials for the dashboard to run as another user. This template does not require any licensed features of PowerShell Universal. 
+The `ActiveDirectory` module is required. All Active Directory commands run under the context of the PowerShell Universal service account. You can specify alternate credentials for the dashboard to run as another user. 
 
 ## Role-Based Access
 
