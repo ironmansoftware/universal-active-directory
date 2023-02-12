@@ -34,7 +34,12 @@ Reports are scripts that can be run to query Active Directory. All reports suppo
 
 Current Reports Include:
 
+- Soon to expire Accounts
 - Inactive Users
+- User with expired account
+- Users that cannot change their password
+- Users with expired passwords
+- Users with passwords that never expire
 - Users that have never logged on
 - Users without Managers
 - Recently Changed Users

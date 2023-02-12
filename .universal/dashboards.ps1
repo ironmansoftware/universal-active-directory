@@ -1,1 +1,1 @@
-﻿New-PSUDashboard -Name "ActiveDirectory" -FilePath "dashboards\ActiveDirectory\ActiveDirectory.ps1" -BaseUrl "/dashboard" -Authenticated -Role @('Administrator') -AutoDeploy
+﻿New-PSUDashboard -Name "ActiveDirectory" -FilePath "dashboards\ActiveDirectory\ActiveDirectory.ps1" -BaseUrl "/" -Authenticated -Role @('Administrator') -AutoDeploy

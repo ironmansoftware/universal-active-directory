@@ -1,0 +1,1 @@
+﻿Get-ADUser -filter {Enabled -eq $true -and PasswordNeverExpires -eq $true } -Properties * | Select Name,DistinguishedName

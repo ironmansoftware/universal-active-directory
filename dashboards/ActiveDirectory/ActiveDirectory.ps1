@@ -70,6 +70,12 @@ function New-ADReportPage {
 
 $Reports = @(
       @{
+          Title = "Accounts - Soon to Expire"
+          Url = "/reports/accounts/expiring"
+          Description = "A report of accounts that are soon to expire."
+          Script = "Reports\Accounts - Soon to Expire.ps1"
+      }
+      @{
           Title = "Computers - Disabled"
           Url = "/reports/computers/disabled"
           Description = "A report of computers that are disabled."
@@ -88,6 +94,18 @@ $Reports = @(
           Script = "Reports\Computers - Inactive.ps1"
       }
       @{
+          Title = "Users - Account Expired"
+          Url = "/reports/users/account-expired"
+          Description = "A report of users with expired accounts."
+          Script = "Reports\Users - Account Expired.ps1"
+      }
+      @{
+          Title = "Users - Cannot Change Password"
+          Url = "/reports/users/cannot-change-password"
+          Description = "A report of users that cannot change their password."
+          Script = "Reports\Users - Cannot Change Password.ps1"
+      }
+      @{
           Title = "Users - Inactive"
           Url = "/reports/users/inactive"
           Description = "A report of users that have been inactive for 30 days or more."
@@ -104,6 +122,18 @@ $Reports = @(
         Url = "/reports/users/never-logged-on"
         Description = "A report of users that have never logged on."
         Script = "Reports\Users - Never Logged On.ps1"
+    }
+    @{
+        Title = "Users - Password Expired"
+        Url = "/reports/users/password-expired"
+        Description = "A report of users with expired passwords."
+        Script = "Reports\Users - Password Expired.ps1"
+    }
+    @{
+        Title = "Users - Password Never Expires"
+        Url = "/reports/users/password-never-expires"
+        Description = "A report of users where their password never expires."
+        Script = "Reports\Users - Password Never Expires.ps1"
     }
     @{
         Title = "Users - Recently Created"
@@ -137,7 +167,7 @@ New-UDDashboard -Title "Active Directory Tools" -Pages @(
   Get-UDPage -Name "Search Users"
   Get-UDPage -Name "Reset Password"
   Get-UDPage -Name "Restore Deleted User"
-  New-UDPage -Name 'Reports' -Content {
+  New-UDPage -Name 'Reports' -DefaultHomePage -Content {
     New-UDTypography -Text 'Reports' -Variant h4
     New-UDHtml -Markup '<hr/>'
     New-UDLayout -Columns 3 -Content {

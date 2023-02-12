@@ -1,0 +1,1 @@
+﻿Search-ADAccount -AccountExpiring  -ResultPageSize 2000 -resultSetSize $null| Select-Object Name, SamAccountName, DistinguishedName
