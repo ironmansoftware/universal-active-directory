@@ -6,6 +6,14 @@
 
 Active Directory tools built with PowerShell Universal. Reset passwords, restore deleted users, manage group membership and search for objects.
 
+## Installation 
+
+- Download and install [PowerShell Universal](https://ironmansoftware.com/powershell-universal/downloads)
+- Navigate to [http://localhost:5000](http://localhost:5000)
+- Login with admin\ admin 
+- Install this template by click Platform \ Templates and install the Active Directory template
+- View the dashboard at [http://localhost:5000/active-directory](http://localhost:5000/active-directory)
+
 ## General Tools
 
 - Object Search
